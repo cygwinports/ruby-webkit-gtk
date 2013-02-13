@@ -1,0 +1,11 @@
+inherit rubygem
+
+NAME="ruby-webkit-gtk"
+VERSION=1.2.1
+RELEASE=1
+CATEGORY="Ruby"
+SUMMARY="Ruby WebKitGTK+ bindings"
+DESCRIPTION="Ruby/WebKitGTK is a Ruby binding of WebKitGTK+."
+HOMEPAGE="http://ruby-gnome2.sourceforge.jp/"
+
+REQUIRES="girepository-WebKit3.0"
