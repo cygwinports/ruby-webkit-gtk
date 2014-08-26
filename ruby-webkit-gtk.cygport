@@ -1,11 +1,16 @@
 inherit rubygem
 
 NAME="ruby-webkit-gtk"
-VERSION=2.0.2
+VERSION=2.2.0
 RELEASE=1
 CATEGORY="Ruby"
 SUMMARY="Ruby WebKitGTK+ bindings"
 DESCRIPTION="Ruby/WebKitGTK is a Ruby binding of WebKitGTK+."
 HOMEPAGE="http://ruby-gnome2.sourceforge.jp/"
 
-REQUIRES="girepository-WebKit3.0"
+ARCH=noarch
+
+PKG_NAMES="${NAME} ${NAME}-doc"
+ruby_webkit_gtk_REQUIRES="girepository-WebKit3.0"
+ruby_webkit_gtk_CONTENTS="--exclude=sample ${RUBYGEM_INSTDIR#/} ${RUBYGEM_SPEC#/}"
+ruby_webkit_gtk_doc_CONTENTS="${RUBYGEM_DOCDIR#/} ${RUBYGEM_INSTDIR#/}/sample/"
